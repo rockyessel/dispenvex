@@ -17,7 +17,7 @@ export default Topic;
 export const getStaticPaths = async () => {};
 
 export const getStaticProps = async ({ params: { topic } }) => {
-  const query = ``;
+  const query = ``
 
   const result = await client.fetch(query);
 
