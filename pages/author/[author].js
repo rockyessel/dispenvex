@@ -1,19 +1,20 @@
 import React from 'react';
-import { client, urlFor } from '../../library/client';
+import { client } from '../../library/client';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
-const Topic = ({ result }) => {
+const Author = ({ result }) => {
   console.log(result);
   const router = useRouter();
 
   if (router.isFallback) {
     return <div>Loading</div>;
   } else {
-    return <div>Author</div>;
+    return <div></div>;
   }
 };
 
-export default Topic;
+export default Author;
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "author"]{
@@ -40,13 +41,13 @@ export const getStaticProps = async ({ params: { author } }) => {
   const query = `*[_type == "author" && slug.current == "${author}"]{
   name,
   slug,
-  image,
+  "image": image.asset->url,
   bio,
   _id,
   "post": *[_type == "post" && author->._id == ^._id][]{
   author->,
   slug,
-  mainImage,
+  "image": mainImage.asset->url,
   category->,
   body,
   title,
