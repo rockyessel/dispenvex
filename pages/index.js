@@ -30,8 +30,7 @@ export const getServerSideProps = async () => {
   featured_post,
   recommended_post,
   publishedAt,
-}
-`;
+}`;
 
   const post_card = await client.fetch(post);
 
