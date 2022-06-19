@@ -1,0 +1,61 @@
+.container {
+  width: 20rem;
+}
+
+.categoryAndDate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.categoryName {
+  border: 0.01rem solid black;
+  padding: 0.2rem;
+  color: #283fed;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+.date {
+  opacity: 0.4;
+}
+
+.imageContainer {
+  width: 20rem;
+}
+
+.image {
+  object-fit: cover;
+  width: 4rem;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  background-color: #000;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+.featured {
+  opacity: 0.6;
+  border: none;
+  color: white;
+  padding: 0.3rem;
+  font-size: 0.7rem;
+  background-color: rgb(44, 60, 239);
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
