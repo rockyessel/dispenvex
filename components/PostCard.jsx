@@ -26,13 +26,19 @@ const PostCard = ({ post }) => {
         <Link href={`/category/${category.slug.current}`}>
           <span className={css.categoryName}>{category.name}</span>
         </Link>
+        {featured_post && <button className={css.featured}>Featured</button>}
+
+        {recommended_post && (
+          <button className={css.featured}>Recommended</button>
+        )}
 
         <span className={css.date}>
-          {moment(publishedAt).format('MMM Do YY')}
+          {moment(publishedAt).startOf('hour').fromNow()}
         </span>
       </div>
 
-      <div>
+      <div className={css.body}>
+        <h3>{title}</h3>
         <Zoom>
           <div className={css.imageContainer}>
             <Image
@@ -41,21 +47,21 @@ const PostCard = ({ post }) => {
               width={300}
               height={200}
               layout='responsive'
+              loading='lazy'
             />
           </div>
         </Zoom>
-        <h3>{title}</h3>
         <p>{short_description}</p>
       </div>
 
-      <div>
+      <div className={css.buttonContainer}>
         <Link href={`/posts/${slug.current}`}>
           <button className={css.btn}>Read more</button>
         </Link>
-        {featured_post && <button className={css.featured}>Featured</button>}
+        {/* {featured_post && <button className={css.featured}>Featured</button>}
         {recommended_post && (
           <button className={css.featured}>Recommended</button>
-        )}
+        )} */}
       </div>
     </div>
   );
