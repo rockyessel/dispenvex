@@ -53,10 +53,17 @@ export const getStaticProps = async ({ params: { author } }) => {
   bio,
   _id,
   "post": *[_type == "post" && author->._id == ^._id][]{
-  author->,
+  author->{
+    name,
+    slug,
+    "image": image.asset->url,
+  },
   slug,
   "image": mainImage.asset->url,
-  category->,
+  category->{
+    name,
+    slug,
+  },
   body,
   title,
   featured_post,
