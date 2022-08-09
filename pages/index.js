@@ -15,14 +15,16 @@ export default function Home({ post_card }) {
       <Navbar />
       <div className={css.contentContainer}>
         <div className={css.category}>
-          <h1>Category</h1>
+          <h1 className='text-lg font-bold'>Category</h1>
           {}
         </div>
-        <div className={css.recentPost}>
+        <div className='w-full'>
           <h1>Recent Post</h1>
-          {post_card?.map((post, index) => (
-            <PostCard post={post} key={index} />
-          ))}
+          <ul className='flex flex-wrap justify-center gap-4'>
+            {post_card?.map((post, index) => (
+              <PostCard post={post} key={index} />
+            ))}
+          </ul>
         </div>
       </div>
     </div>

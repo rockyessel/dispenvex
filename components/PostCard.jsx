@@ -21,15 +21,21 @@ const PostCard = ({ post }) => {
   } = post;
   // console.log(title);
   return (
-    <div className={css.container}>
+    <div className='w-[320px]'>
       <div className={css.categoryAndDate}>
         <Link href={`/category/${category.slug.current}`}>
           <span className={css.categoryName}>{category.name}</span>
         </Link>
-        {featured_post && <button className={css.featured}>Featured</button>}
+        {featured_post && (
+          <button className='bg-blue-500 text-white px-2 hover:ring-2 hover:ring-gray-200 active:ring-4 active:ring-gray-300 py-1 text-xs font-thin rounded'>
+            Featured
+          </button>
+        )}
 
         {recommended_post && (
-          <button className={css.featured}>Recommended</button>
+          <button className='bg-violet-500 text-white px-2 hover:ring-2 hover:ring-gray-200 active:ring-4 active:ring-gray-300 py-1 text-xs font-thin rounded'>
+            Recommended
+          </button>
         )}
 
         <span className={css.date}>
