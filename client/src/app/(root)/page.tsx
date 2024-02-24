@@ -7,21 +7,59 @@ const Home = () => {
   return (
     <div className='flex flex-col'>
       {/* Hero */}
-      <div className='flex flex-col pt-12 w-full text-lg font-semibold leading-6 text-center whitespace-nowrap bg-opacity-0 max-md:max-w-full bg-white/10 rounded-[0.5rem] p-5'>
-        <div className='w-fit text-center lg:text-4xl md:text-3xl sm:text-2xl text-xl'>
-          {`'Disperse' a hub for decentralized social platform to connect, and
-          engage.`}
-        </div>
 
-        <div className='flex gap-4 self-center mt-48 max-md:flex-wrap max-md:mt-10 max-md:max-w-full'>
-          <p className='grow justify-center px-16 py-6 text-white bg-rose-600 rounded-2xl max-md:px-5'>
-            Get Started
-          </p>
-          <p className='grow justify-center px-16 py-6 tracking-normal text-rose-600 rounded-2xl bg-rose-600 bg-opacity-10 max-md:px-5'>
-            Learn More
-          </p>
+      <div>
+        <p>Top Article</p>
+        <div className='grid grid-cols-4 gap-4'>
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className='flex flex-col pt-12 w-full text-lg font-semibold leading-6 text-center whitespace-nowrap bg-opacity-0 max-md:max-w-full bg-white/10 rounded-[0.5rem] p-5'
+            >
+              {/* <div className='w-fit text-center lg:text-4xl md:text-3xl sm:text-2xl text-xl'>
+            {`'Disperse' a hub for decentralized social platform to connect, and
+          engage.`}
+          </div> */}
+
+              {/* <div className='flex gap-4 self-center mt-48 max-md:flex-wrap max-md:mt-10 max-md:max-w-full'>
+            <p className='grow justify-center px-16 py-6 text-white bg-rose-600 rounded-2xl max-md:px-5'>
+              Get Started
+            </p>
+            <p className='grow justify-center px-16 py-6 tracking-normal text-rose-600 rounded-2xl bg-rose-600 bg-opacity-10 max-md:px-5'>
+              Learn More
+            </p>
+          </div> */}
+            </div>
+          ))}
         </div>
       </div>
+
+      <div>
+        <p>Top Contributors</p>
+        <div className='grid grid-cols-4 gap-4'>
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className='flex flex-col pt-12 w-full text-lg font-semibold leading-6 text-center whitespace-nowrap bg-opacity-0 max-md:max-w-full bg-white/10 rounded-[0.5rem] p-5'
+            >
+              {/* <div className='w-fit text-center lg:text-4xl md:text-3xl sm:text-2xl text-xl'>
+            {`'Disperse' a hub for decentralized social platform to connect, and
+          engage.`}
+          </div> */}
+
+              {/* <div className='flex gap-4 self-center mt-48 max-md:flex-wrap max-md:mt-10 max-md:max-w-full'>
+            <p className='grow justify-center px-16 py-6 text-white bg-rose-600 rounded-2xl max-md:px-5'>
+              Get Started
+            </p>
+            <p className='grow justify-center px-16 py-6 tracking-normal text-rose-600 rounded-2xl bg-rose-600 bg-opacity-10 max-md:px-5'>
+              Learn More
+            </p>
+          </div> */}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <ConnectBtn />
       {/* main */}
       <div className='flex flex-col pt-12 w-full  max-md:max-w-full'>

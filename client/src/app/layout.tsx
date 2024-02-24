@@ -1,10 +1,8 @@
 import Navbar from '@/components/natives/navbar';
-import { NextAuthProvider } from '@/lib/providers/next-auth';
 import '@/styles/globals.css';
 import { RootLayoutProps } from '@/types';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import NextWagmiProvider from '@/lib/providers/wagmi';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,12 +17,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
       <body
         className={`${inter.className} w-full h-full px-4 lg:px-20 relative'`}
       >
-        <NextWagmiProvider>
-          <NextAuthProvider>
-            <Navbar />
-            <main className=''>{children}</main>
-          </NextAuthProvider>
-        </NextWagmiProvider>
+        {children}
       </body>
     </html>
   );
